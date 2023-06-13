@@ -2,14 +2,14 @@
 # 火石工具之flutter桌面端MVVM项目目录结构
 
 
-推荐下我的项目:[火石工具](http://flint-tools.guanshangyun.com/){:target="_blank"}
+推荐下我的项目:[火石工具](http://flint-tools.guanshangyun.com/)
 
 ![火石工具](https://itools-1253225490.cos.ap-guangzhou.myqcloud.com/article/flutter_directory_structure/20230613152041.png)
 
 ` 在项目立项时，我们都会去规划项目的目录结构。在这里给大家介绍下火石工具的MVVM项目目录结构给大家参考；
 火石工具主要以桌面端为主，在路由方面与手机端有一定的出入。`
 
-示例Github链接：[flutter_directory_structure](https://github.com/FlintTools/flutter_directory_structure){:target="_blank"}
+示例Github链接：[flutter_directory_structure](https://github.com/FlintTools/flutter_directory_structure)
 
 ### 1. 项目目录搭建解决了我们什么问题？
 在项目开发中，如果我们把`视图``逻辑``API请求`都写在一个文件里面，后期维护会给我们带来很大的麻烦，不利于维护及代码复用性不高。所以我们要将代码进行分层，`视图`只负责展示,`逻辑`只负责业务代码的逻辑部分，当我们后期维护需要修改时只需要找到对应的目录文件进行修改。
