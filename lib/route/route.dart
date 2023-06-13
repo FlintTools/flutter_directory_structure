@@ -1,9 +1,6 @@
-import 'dart:io';
-
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:go_router/go_router.dart';
 
-import '/utils/ui.dart';
 import '/view/user/login_page.dart';
 import '/route/route_name.dart';
 import '/route/route_branches.dart';
@@ -14,21 +11,12 @@ final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>(de
 
 GoRouter router = GoRouter(
   navigatorKey: _rootNavigatorKey,
-  initialLocation: "/login", //'/translate',
+  initialLocation: "/login",
   debugLogDiagnostics: true,
   routes: <RouteBase>[
-    /// 登录
+    /// 登录页面
     GoRoute(path: '/${RouteName.login}', name: RouteName.login, builder: (context, state) => LoginPage()),
-
-    /// 注册
-    // GoRoute(path: '/${RouteName.register}', name: RouteName.register, builder: (context, state) => RegisterPage()),
-
-    /// 找回密码
-    // GoRoute(
-    //     path: '/${RouteName.resetPassword}',
-    //     name: RouteName.resetPassword,
-    //     builder: (context, state) => ResetPassword()),
-
+    /// 功能页面
     StatefulShellRoute.indexedStack(
       builder: (context, state, child) {
         return RouteMenuPage(
@@ -136,12 +124,12 @@ class _RouteMenuPageState extends State<RouteMenuPage> with AutomaticKeepAliveCl
         return widget.child;
       },
       pane: NavigationPane(
-        size: NavigationPaneSize(openWidth: 240),
+        size: const NavigationPaneSize(openWidth: 240),
         selected: _calculateSelectedIndex(context),
         header: Container(
           width: 220,
           height: 120,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xFFCFCFCF),
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
@@ -152,7 +140,7 @@ class _RouteMenuPageState extends State<RouteMenuPage> with AutomaticKeepAliveCl
               SizedBox(height: 10),
               SizedBox(width: 50, height: 50, child: Image.asset("assets/logo.png")),
               SizedBox(height: 10),
-              Column(
+              const Column(
                 children: [
                   Tooltip(
                     message: "能量值在使用功能时消耗，每日恢复2000值",

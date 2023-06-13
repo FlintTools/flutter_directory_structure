@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final expressDelivery = expressDeliveryFromJson(jsonString);
-
 import 'dart:convert';
 
 IpInquiry expressDeliveryFromJson(String str) => IpInquiry.fromJson(json.decode(str));

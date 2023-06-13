@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:go_router/go_router.dart';
-import 'dart:ui' as ui;
-
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluent_ui/fluent_ui.dart' show FluentThemeData, FluentTheme, TextBox, PasswordBox, PasswordRevealMode;
 
 import '/view_model/user/login_viewmodel.dart';
 import '/components/animated_background.dart';
-import '/route/route_name.dart';
 import '/components/particle/particle_widget.dart';
-import "/config.dart";
-// import '/utils/top_menu.dart';
 import '/utils/ui.dart';
 
 /**
@@ -99,8 +92,6 @@ class _LoginPageState extends State<LoginPage> with LoginBLoC {
         ],
       )),
     );
-
-    // Scaffold(body: mainPage());
   }
 
   /// 登录按钮
@@ -112,8 +103,7 @@ class _LoginPageState extends State<LoginPage> with LoginBLoC {
             child: ElevatedButton(
               child: Padding(
                 padding: EdgeInsets.all(12.0),
-                child: Text("登录", style: theme.typography.body?.copyWith(fontSize: 16, color: Colors.white)
-                    ),
+                child: Text("登录", style: theme.typography.body?.copyWith(fontSize: 16, color: Colors.white)),
               ),
               onPressed: () {
                 Map<String, dynamic> data = {
@@ -192,8 +182,7 @@ class _LoginPageState extends State<LoginPage> with LoginBLoC {
       child: Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-          ],
+          children: <Widget>[],
         ),
       ),
     );

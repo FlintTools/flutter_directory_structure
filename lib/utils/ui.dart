@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class UiColour {
   // 中性色
   static Color neutral_11 = const Color(0xFFFFFFFF);
@@ -34,6 +33,3 @@ class UiColour {
 
   static Color red = Colors.red;
 }
-
-
-
